@@ -9,12 +9,15 @@ function getRandomMeme() {
             const memeImage = document.getElementById('meme-image');
             memeImage.onload = () => {
                 memeImage.style.display = 'block'; // Show the image once it's loaded
+
+                // Set the confetti container position to overlay the meme image
+                const confettiContainer = document.getElementById('confetti-container');
+                confettiContainer.style.position = 'absolute';
+                confettiContainer.style.top = memeImage.offsetTop + 'px';
+                confettiContainer.style.left = memeImage.offsetLeft + 'px';
             };
             memeImage.src = randomMemeUrl;
             memeImage.alt = randomMemeTitle;
-
-            // Trigger confetti animation
-            startConfetti(); // Call to start the confetti animation
         })
         .catch(error => console.error('Error fetching meme:', error));
 }
@@ -53,29 +56,4 @@ function playHappyBirthday() {
 function updateButtonLabel() {
     const playButton = document.getElementById('play-audio-button');
     playButton.textContent = isPlaying ? 'Pause Happy Birthday' : 'Play Happy Birthday';
-}
-
-// Initialize the confetti instance after the page loads
-window.onload = () => {
-    const confettiSettings = {
-        target: 'confetti-container',
-        max: 100,
-        size: 1,
-        animate: true,
-        props: ['circle', 'square', 'triangle', 'line'],
-        colors: [[255, 0, 0], [0, 0, 0], [0, 0, 255]], // You can customize the colors here
-    };
-    confetti = new ConfettiGenerator(confettiSettings);
-};
-
-function startConfettiForImage() {
-    const confettiSettings = {
-        target: 'confetti-container',
-        max: 100,
-        size: 1,
-        animate: true,
-        props: ['circle', 'square', 'triangle', 'line'],
-        colors: [[255, 0, 0], [0, 0, 0], [0, 0, 255]], // You can customize the colors here
-    };
-    confetti(confettiSettings);
 }
