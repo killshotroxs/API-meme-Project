@@ -1,9 +1,10 @@
 body {
-    margin-top: 30px;
+    margin-top: 200px;
     display: grid;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    background-color: #2867c585;
 }
 
 #meme-image {
@@ -17,8 +18,9 @@ body {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 40px;
+    font-weight: 600;
     color: #fff;
-    background-color: #0d0101;
+    background-color: #b96969;
     border: none;
     border-radius: 5px;
     cursor: pointer;
