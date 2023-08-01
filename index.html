@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Random Meme Generator</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div id="meme-container">
-        <div id="image-container">
-            <img id="meme-image" src="">
-            
-        </div>
-        <div id="confetti-container"></div>
+      <div id="image-container">
+        <img id="meme-image" src="" />
+      </div>
+      <div id="confetti-container"></div>
     </div>
-    <button id="get-meme-button" class="primary-btn" onclick="getRandomMeme()">Get Random Meme</button>
 
-    <!-- New button to play "happy-birthday.mp3" -->
-    <button id="play-audio-button" class="primary-btn" onclick="playHappyBirthday()">Play Happy Birthday</button>
+    <div class="alignment">
+      <button
+        id="get-meme-button"
+        class="primary-btn"
+        onclick="getRandomMeme()"
+      >
+        Get Random Meme
+      </button>
 
+      <!-- New button to play "happy-birthday.mp3" -->
+      <button
+        id="play-audio-button"
+        class="primary-btn"
+        onclick="playHappyBirthday()"
+      >
+        Play Happy Birthday
+      </button>
+    </div>
     <script src="confetti.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

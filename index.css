@@ -1,15 +1,14 @@
 body {
-    margin: 0;
-    display: ;
+    margin-top: 30px;
+    display: grid;
     justify-content: center;
     align-items: center;
-    width: 50vh;
     gap: 10px;
 }
 
 #meme-image {
-    width: 380px;
-    height: 500px;
+    width: 580px;
+    height: 700px;
     display: none;
 }
 
@@ -17,7 +16,7 @@ body {
     padding: 2%;
     margin-top: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 40px;
     color: #fff;
     background-color: #0d0101;
     border: none;
@@ -25,6 +24,16 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+.alignment{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .primary-btn:hover {
